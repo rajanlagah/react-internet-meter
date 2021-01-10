@@ -1,10 +1,10 @@
 {
-  "name": "react-internet-speed-meter",
+  "name": "react-internet-meter",
   "version": "1.0.0",
   "description": "Notify on internet speed changes",
   "author": "rajanlagah",
   "license": "MIT",
-  "repository": "rajanlagah/react-internet-speed-meter",
+  "repository": "rajanlagah/react-internet-meter",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

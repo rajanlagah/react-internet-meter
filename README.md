@@ -13,16 +13,22 @@ npm install --save react-internet-speed-meter
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'react-internet-speed-meter'
+import { ReactInternetSpeedMeter } from 'react-internet-speed-meter'
 import 'react-internet-speed-meter/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return <ReactInternetSpeedMeter 
+            txtMainHeading="Error" 
+            txtSubHeading="Internet not connected"
+            outputType="alert"
+            customClassName={null}
+            />
 }
+
+export default App
+
 ```
 
 ## License
