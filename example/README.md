@@ -3,3 +3,4 @@ This example was bootstrapped with [Create React App](https://github.com/faceboo
 It is linked to the react-internet-speed-meter package in the parent directory for development purposes.
 
 You can run `yarn install` and then `yarn start` to test your package.
+# react-internet-meter

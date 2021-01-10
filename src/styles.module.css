@@ -1,9 +1,29 @@
 /* add css module styles here (optional) */
 
-.test {
+/* .test {
   margin: 2em;
   padding: 0.5em;
   border: 2px solid #000;
   font-size: 2em;
   text-align: center;
+} */
+.alertDangerContainer{
+  border: 2px solid red;
+  padding: 5px;
+  background-color: rgba(202, 122, 102, 0.507);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.alertDangerHeading{
+  flex-grow: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 5px 0;
+}
+
+.alertDangerInfo{
+  flex-grow: 1;
+  font-size: 0.8rem;
 }
