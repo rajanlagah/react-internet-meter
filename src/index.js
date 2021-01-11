@@ -11,22 +11,27 @@ export const ReactInternetSpeedMeter = ({
   thresholdUnit='megabyte',
   threshold=7,
   txtSubHeading="Diconnected from internet",
-  callbackFunctionOnNetworkDown=()=>console.log("No callback")
+  callbackFunctionOnNetworkDown=()=>console.log("No callback on Network Down"),
+  callbackFunctionOnNetworkTest=()=>console.log("No callback On Network test"),
+  
 }) => {
 
   const [ isNetworkDown,setisNetworkDown ] = useState(false)
   // const imageAddr = "https://drive.google.com/file/d/1-ywHEBYBxZy6VWs7IpcROgrDwGL-au9e/view?usp=sharing"; 
   var imageAddr = "https://res.cloudinary.com/dcwxsms2l/image/upload/v1610376487/pexels-ivan-samkov-6291574_bzqgps.jpg"; 
-
+  let intervalFun
   const downloadSize = 1781287; //bytes
 
   window.addEventListener('offline', ()=> setisNetworkDown(true));
   window.addEventListener('online', ()=> setisNetworkDown(false));
   
-  useEffect(()=> {
-    const interval = window.setInterval(MeasureConnectionSpeed, pingInterval);
-    return () => window.clearInterval(interval)
+  const startInterval = () => {
+    return window.setInterval(MeasureConnectionSpeed, pingInterval);
+  }
 
+  useEffect(()=> {
+    intervalFun = startInterval()
+    return () => window.clearInterval(intervalFun)
   },[])
 
 
@@ -48,6 +53,8 @@ export const ReactInternetSpeedMeter = ({
       
       download.onerror = function (err, msg) {
           console.log('err',err)
+          window.clearInterval(intervalFun)
+
       }
   }
 
@@ -63,6 +70,7 @@ export const ReactInternetSpeedMeter = ({
   }
 
   const setNetworStatus = (speedBps,speedKbps,speedMbps) => {
+    console.log("HERE",speedMbps)
     if( thresholdUnit === 'byte'){
       if(speedBps < threshold){
         setisNetworkDown(true)
@@ -70,6 +78,7 @@ export const ReactInternetSpeedMeter = ({
       }else {
         setisNetworkDown(false)
       }
+      callbackFunctionOnNetworkTest(speedBps)
     }
     else if( thresholdUnit === 'kilobyte'){
       if(speedKbps < threshold){
@@ -78,6 +87,8 @@ export const ReactInternetSpeedMeter = ({
       }else {
         setisNetworkDown(false)
       }
+      callbackFunctionOnNetworkTest(speedKbps)
+
     }
     else if( thresholdUnit === 'megabyte'){
       if(speedMbps < threshold){
@@ -86,6 +97,8 @@ export const ReactInternetSpeedMeter = ({
       }else {
         setisNetworkDown(false)
       }
+      callbackFunctionOnNetworkTest(speedMbps)
+
     }
     else {
       console.log('Invalid thresholdUnit')
@@ -102,5 +115,5 @@ export const ReactInternetSpeedMeter = ({
 
     return <div>Available <b>outputType</b> are alert, model and we got <b>{outputType}</b></div>
   }
-  return <div>online</div>
+  return <div/>
 }

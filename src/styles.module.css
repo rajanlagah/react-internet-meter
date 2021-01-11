@@ -8,11 +8,18 @@
   text-align: center;
 } */
 .alertDangerContainer{
+  display: block;
+  position: fixed; 
+  top:0;
+  left:0;
+  width: 100%;
   border: 2px solid red;
   padding: 5px;
   background-color: rgba(202, 122, 102, 0.507);
   border-radius: 5px;
   display: flex;
+  z-index: 9999;
+  color: #fff;
   flex-direction: column;
 }
 

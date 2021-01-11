@@ -1,0 +1,57 @@
+/* *{
+
+} */
+
+.home-container{
+    height: 100vh;
+    background-color: black;
+    font-size: 20px;
+    color: #fff;
+    margin: 0px;
+    padding: 30px 0;
+}
+.home-container p{
+    font-size: 40px;
+    text-align: center;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.card{
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.card-main-heading{
+    flex-grow: 1;
+}
+.card-info ion-icon{
+    flex-grow: 2;
+    margin: 0 50px;
+}
+.card-info{
+    flex-grow: 5;
+    font-size: 60px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: auto;
+}
+.card-info-msg{
+    font-size: 20px;
+
+}

@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-internet-speed-meter.svg)](https://www.npmjs.com/package/react-internet-speed-meter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## How it work ?
+![untitled-project_MBDXODJs_itmf](https://user-images.githubusercontent.com/20952569/104233887-a1113400-5478-11eb-8706-5fe07a6058d4.gif)
+
+
 ## Install
 
 ```bash
