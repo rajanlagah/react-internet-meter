@@ -1,6 +1,6 @@
 {
   "name": "react-internet-meter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Notify on internet speed changes",
   "author": "rajanlagah",
   "license": "MIT",
