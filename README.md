@@ -19,7 +19,7 @@ npm  install --save react-internet-meter
 ```jsx
 import React from 'react'
 
-import { ReactInternetSpeedMeter } from 'react-internet-speed-meter'
+import { ReactInternetSpeedMeter } from 'react-internet-meter'
 import 'react-internet-speed-meter/dist/index.css'
 
 const App = () => {
