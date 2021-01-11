@@ -10,8 +10,8 @@
 
 ## Install
 
-```bash
-npm install --save react-internet-speed-meter
+```
+npm  install --save react-internet-meter
 ```
 
 ## Usage
