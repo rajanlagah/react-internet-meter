@@ -11,16 +11,15 @@ export const ReactInternetSpeedMeter = ({
   thresholdUnit='megabyte',
   threshold=7,
   txtSubHeading="Diconnected from internet",
+  imageAddr="https://res.cloudinary.com/dcwxsms2l/image/upload/v1610376487/pexels-ivan-samkov-6291574_bzqgps.jpg",
+  downloadSize="1781287", //bytes
   callbackFunctionOnNetworkDown=()=>console.log("No callback on Network Down"),
   callbackFunctionOnNetworkTest=()=>console.log("No callback On Network test"),
   
 }) => {
 
   const [ isNetworkDown,setisNetworkDown ] = useState(false)
-  // const imageAddr = "https://drive.google.com/file/d/1-ywHEBYBxZy6VWs7IpcROgrDwGL-au9e/view?usp=sharing"; 
-  var imageAddr = "https://res.cloudinary.com/dcwxsms2l/image/upload/v1610376487/pexels-ivan-samkov-6291574_bzqgps.jpg"; 
   let intervalFun
-  const downloadSize = 1781287; //bytes
 
   window.addEventListener('offline', ()=> setisNetworkDown(true));
   window.addEventListener('online', ()=> setisNetworkDown(false));
@@ -45,9 +44,8 @@ export const ReactInternetSpeedMeter = ({
       var cacheBuster = "?nnn=" + startTime;
       download.src = imageAddr + cacheBuster;
 
-      download.onload = function () {
+      download.onload = function (d) {
           endTime = (new Date()).getTime();
-          console.log('here')
           showResults(startTime , endTime);
       }
       

@@ -2,6 +2,8 @@
 
 > Notify on internet speed changes
 
+>> In later version default image will be removed. It is recommended to give address of image on your server/s. As it will give you more usefull and reliable values.
+
 [![NPM](https://img.shields.io/npm/v/react-internet-meter.svg)](https://www.npmjs.com/package/react-internet-meter) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## How it work ?
@@ -28,9 +30,11 @@ const App = () => {
             outputType="alert"
             customClassName={null}
             txtMainHeading="Opps..." 
-            pingInterval="4000" // sec
+            pingInterval={4000} // milliseconds 
             thresholdUnit='megabyte' // "byte" , "kilobyte", "megabyte" 
             threshold={100}
+             imageAddr="https://res.cloudinary.com/dcwxsms2l/image/upload/v1610376487/pexels-ivan-samkov-6291574_bzqgps.jpg"
+            downloadSize="1781287"  //bytes
             callbackFunctionOnNetworkDown={(speed)=>console.log(`Internet speed is down ${speed}`)}
             callbackFunctionOnNetworkTest={(speed)=>setwifiSpeed(speed)}
           />
@@ -50,7 +54,12 @@ export default App
 | threshold                     	| Integer   	| Minimum required value                	|
 | callbackFunctionOnNetworkDown 	| function  	| Function that run on network down     	|
 | callbackFunctionOnNetworkTest 	| function  	| Function that run after network check 	|
+| imageAddr                     	| string     	| dummy image url      	                  |
+| callbackFunctionOnNetworkTest 	| string  	  | image size                            	|
 
 ## License
 
 MIT © [rajanlagah](https://github.com/rajanlagah)
+
+### Note
+Dont forget to give start to this repo on github... 
