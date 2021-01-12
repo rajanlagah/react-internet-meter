@@ -39,6 +39,17 @@ const App = () => {
 export default App
 
 ```
+| Parameter                     	| Type      	| Options                               	|
+|-------------------------------	|-----------	|---------------------------------------	|
+| txtSubHeading                 	| string    	| any string you want                   	|
+| outputType                    	| string    	| "alert"/"modal"/"empty"               	|
+| customClassName               	| string    	| css class you want                    	|
+| txtMainHeading                	| string    	| any string you want                   	|
+| pingInterval                  	| integer   	| time in milliseconds                  	|
+| thresholdUnit                 	| string    	| "byte"/"kilobyte"/"megabyte"          	|
+| threshold                     	| Integer   	| Minimum required value                	|
+| callbackFunctionOnNetworkDown 	| function  	| Function that run on network down     	|
+| callbackFunctionOnNetworkTest 	| function  	| Function that run after network check 	|
 
 ## License
 
