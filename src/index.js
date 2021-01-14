@@ -107,11 +107,12 @@ export const ReactInternetSpeedMeter = ({
     if(outputType == 'alert'){
       return <Alert
                 alertStyles={styles} 
+                customClassName={customClassName}
                 txtMainHeading={txtMainHeading} 
                 txtSubHeading={txtSubHeading } />
     }
 
-    return <div>Available <b>outputType</b> are alert, model and we got <b>{outputType}</b></div>
+    return <div/>
   }
   return <div/>
 }
