@@ -15,10 +15,13 @@ const App = () => {
             outputType="alert"
             customClassName={null}
             txtMainHeading="Opps..." 
+            imageUrl="https://res.cloudinary.com/de8eknmis/image/upload/v1634730491/sample.jpg"
+            downloadSize="117438" //bytes
             pingInterval="4000" // sec
             thresholdUnit='megabyte' // "byte" , "kilobyte", "megabyte" 
             threshold={100}
             callbackFunctionOnNetworkDown={(speed)=>console.log(`Internet speed is down ${speed}`)}
+            callbackFunctionOnError={(errMsg)=>console.log(errMsg)}
             callbackFunctionOnNetworkTest={(speed)=>setwifiSpeed(speed)}
           />
         <HomePage 
